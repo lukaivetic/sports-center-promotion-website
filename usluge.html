@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="sr-Latn">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Pogledajte usluge sportskog centra: teretanu, grupne i personalne treninge, sportske terene, školu sporta i takmičenja."
+    >
+
+    <meta
+        name="keywords"
+        content="usluge sportskog centra, teretana, grupni treninzi, personalni treninzi, sportski tereni, škola sporta, sportska takmičenja"
+    >
+
+    <meta
+        name="author"
+        content="Sportski centar"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="language"
+        content="Serbian"
+    >
+
+    <title>Usluge | Sportski centar</title>
+
+    <link rel="stylesheet" href="css/stilovi.css">
+</head>
+
+<body>
+    <header>
+        <nav
+            class="glavna-navigacija"
+            aria-label="Glavna navigacija"
+        >
+            <a
+                class="veza-logotipa"
+                href="pocetna.html"
+                aria-label="Sportski centar – početna stranica"
+            >
+                <img
+                    class="logotip"
+                    src="slike/logo-sportskog-centra.svg"
+                    alt="Logo sportskog centra"
+                >
+
+                <span data-prevod="nazivCentra">
+                    Sportski centar
+                </span>
+            </a>
+
+            <ul class="lista-glavnog-menija">
+                <li>
+                    <a
+                        href="pocetna.html"
+                        data-prevod="pocetna"
+                    >
+                        Početna
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="o-nama.html"
+                        data-prevod="oNama"
+                    >
+                        O nama
+                    </a>
+                </li>
+
+                <li class="stavka-mega-menija">
+                    <button
+                        class="dugme-mega-menija"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="padajuci-mega-meni"
+                    >
+                        <span data-prevod="usluge">
+                            Usluge
+                        </span>
+
+                        <span aria-hidden="true">▼</span>
+                    </button>
+
+                    <div
+                        class="mega-meni"
+                        id="padajuci-mega-meni"
+                    >
+                        <div class="kolona-mega-menija">
+                            <h2 data-prevod="fitnes">
+                                Fitnes
+                            </h2>
+
+                            <a
+                                href="usluge.html#teretana"
+                                data-prevod="teretana"
+                            >
+                                Teretana
+                            </a>
+
+                            <a
+                                href="usluge.html#grupni-treninzi"
+                                data-prevod="grupniTreninzi"
+                            >
+                                Grupni treninzi
+                            </a>
+
+                            <a
+                                href="usluge.html#personalni-treninzi"
+                                data-prevod="personalniTreninzi"
+                            >
+                                Personalni treninzi
+                            </a>
+                        </div>
+
+                        <div class="kolona-mega-menija">
+                            <h2 data-prevod="sport">
+                                Sport
+                            </h2>
+
+                            <a
+                                href="usluge.html#sportski-tereni"
+                                data-prevod="sportskiTereni"
+                            >
+                                Sportski tereni
+                            </a>
+
+                            <a
+                                href="usluge.html#skola-sporta"
+                                data-prevod="skolaSporta"
+                            >
+                                Škola sporta
+                            </a>
+
+                            <a
+                                href="usluge.html#takmicenja"
+                                data-prevod="takmicenja"
+                            >
+                                Sportska takmičenja
+                            </a>
+                        </div>
+
+                        <div class="kolona-mega-menija">
+                            <h2 data-prevod="informacije">
+                                Informacije
+                            </h2>
+
+                            <a
+                                href="usluge.html#multimedija"
+                                data-prevod="multimedija"
+                            >
+                                Multimedija
+                            </a>
+
+                            <a
+                                href="dokumenti/cenovnik.pdf"
+                                target="_blank"
+                                rel="noopener"
+                                data-prevod="cenovnik"
+                            >
+                                Cenovnik
+                            </a>
+
+                            <a
+                                href="kontakt.html"
+                                data-prevod="probniTrening"
+                            >
+                                Probni trening
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <a
+                        href="kontakt.html"
+                        data-prevod="kontakt"
+                    >
+                        Kontakt
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div
+            class="kontrole-pristupacnosti"
+            aria-label="Podešavanja pristupačnosti"
+        >
+            <span data-prevod="pristupacnost">
+                Pristupačnost
+            </span>
+
+            <button
+                id="tamna-tema"
+                type="button"
+                data-prevod="tamnaTema"
+            >
+                Tamna tema
+            </button>
+
+            <button
+                id="svetla-tema"
+                type="button"
+                data-prevod="svetlaTema"
+            >
+                Svetla tema
+            </button>
+
+            <button
+                id="manji-font"
+                type="button"
+                data-prevod="manjiFont"
+            >
+                Manji font
+            </button>
+
+            <button
+                id="normalan-font"
+                type="button"
+                data-prevod="normalanFont"
+            >
+                Normalan font
+            </button>
+
+            <button
+                id="veci-font"
+                type="button"
+                data-prevod="veciFont"
+            >
+                Veći font
+            </button>
+
+            <label
+                for="izbor-jezika"
+                data-prevod="jezik"
+            >
+                Jezik:
+            </label>
+
+            <select id="izbor-jezika">
+                <option value="sr">
+                    Srpski
+                </option>
+
+                <option value="en">
+                    English
+                </option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1 data-prevod="naslovUsluga">
+                Naše usluge
+            </h1>
+
+            <p data-prevod="opisUsluga">
+                Sportski centar nudi različite programe za početnike,
+                rekreativce i iskusne sportiste.
+            </p>
+
+            <article id="teretana">
+                <h2 data-prevod="teretana">
+                    Teretana
+                </h2>
+
+                <p data-prevod="opisUslugeTeretana">
+                    Savremena oprema za individualne i vođene
+                    treninge snage i kondicije.
+                </p>
+            </article>
+
+            <article id="grupni-treninzi">
+                <h2 data-prevod="grupniTreninzi">
+                    Grupni treninzi
+                </h2>
+
+                <p data-prevod="opisUslugeGrupniTreninzi">
+                    Različiti programi prilagođeni svim uzrastima
+                    i nivoima fizičke pripremljenosti.
+                </p>
+            </article>
+
+            <article id="personalni-treninzi">
+                <h2 data-prevod="personalniTreninzi">
+                    Personalni treninzi
+                </h2>
+
+                <p data-prevod="opisUslugePersonalniTreninzi">
+                    Individualni treninzi sa stručnim trenerom i
+                    programom prilagođenim potrebama, mogućnostima
+                    i ciljevima svakog korisnika.
+                </p>
+            </article>
+
+            <article id="sportski-tereni">
+                <h2 data-prevod="sportskiTereni">
+                    Sportski tereni
+                </h2>
+
+                <p data-prevod="opisUslugeSportskiTereni">
+                    Tereni za rekreativne treninge, timske sportove
+                    i organizovanje sportskih takmičenja.
+                </p>
+            </article>
+
+            <article id="skola-sporta">
+                <h2 data-prevod="skolaSporta">
+                    Škola sporta
+                </h2>
+
+                <p data-prevod="opisSkoleSporta">
+                    Programi za decu koji podstiču pravilan fizički
+                    razvoj, koordinaciju, timski duh i upoznavanje
+                    različitih sportskih disciplina.
+                </p>
+            </article>
+
+            <article id="takmicenja">
+                <h2 data-prevod="takmicenja">
+                    Sportska takmičenja
+                </h2>
+
+                <p data-prevod="opisTakmicenja">
+                    Organizovanje rekreativnih turnira, liga,
+                    sportskih događaja i takmičenja za različite
+                    uzraste.
+                </p>
+            </article>
+        </section>
+
+        <section
+            id="multimedija"
+            class="multimedijalna-sekcija"
+        >
+            <h2 data-prevod="upoznajteCentar">
+                Upoznajte naš sportski centar
+            </h2>
+
+            <p data-prevod="opisMultimedije">
+                Pogledajte prostor, treninge i sadržaje koje naš
+                sportski centar nudi svojim članovima.
+            </p>
+
+            <article class="multimedijalni-element">
+                <h3 data-prevod="prostorCentra">
+                    Prostor sportskog centra
+                </h3>
+
+                <img
+                    class="multimedijalna-slika"
+                    src="slike/sportski-centar.jpg"
+                    alt="Unutrašnjost sportskog centra sa spravama za vežbanje"
+                    data-prevod-alt="opisSlikeCentra"
+                >
+            </article>
+
+            <article class="multimedijalni-element">
+                <h3 data-prevod="promotivniVideo">
+                    Promotivni video
+                </h3>
+
+                <video
+                    class="multimedijalni-video"
+                    controls
+                    preload="metadata"
+                    poster="slike/sportski-centar.jpg"
+                >
+                    <source
+                        src="video/promocija-sportskog-centra.mp4"
+                        type="video/mp4"
+                    >
+
+                    <span data-prevod="videoNijePodrzan">
+                        Vaš pregledač ne podržava prikaz MP4
+                        video-snimka.
+                    </span>
+                </video>
+            </article>
+
+            <article class="multimedijalni-element">
+                <h3 data-prevod="cenovnikUsluga">
+                    Cenovnik usluga
+                </h3>
+
+                <p data-prevod="opisCenovnika">
+                    Informacije o članarinama i ostalim uslugama
+                    možete pronaći u našem cenovniku.
+                </p>
+
+                <a
+                    class="dugme-dokument"
+                    href="dokumenti/cenovnik.pdf"
+                    target="_blank"
+                    rel="noopener"
+                    data-prevod="otvoriteCenovnik"
+                >
+                    Otvorite cenovnik
+                </a>
+            </article>
+
+            <article class="multimedijalni-element">
+                <h3 data-prevod="primerTreninga">
+                    Primer sportskog treninga
+                </h3>
+
+                <div class="okvir-video-zapisa">
+                    <iframe
+                        src="https://www.youtube.com/embed/ml6cT4AZdqI"
+                        title="Video sportskog treninga"
+                        data-prevod-title="naslovVideoZapisa"
+                        loading="lazy"
+                        allow="accelerometer; autoplay;
+                               clipboard-write; encrypted-media;
+                               gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </article>
+
+            <article class="multimedijalni-element">
+                <h3 data-prevod="nasaLokacija">
+                    Naša lokacija
+                </h3>
+
+                <div class="okvir-mape">
+                    <iframe
+                        src="https://www.google.com/maps?q=Beogradska+arena&amp;output=embed"
+                        title="Lokacija sportskog centra"
+                        data-prevod-title="naslovMape"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sportski centar</p>
+    </footer>
+
+    <script src="js/glavna-skripta.js"></script>
+    <script src="js/pristupacnost.js"></script>
+</body>
+</html>

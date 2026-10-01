@@ -1,0 +1,1106 @@
+@font-face {
+    font-family: "RobotoLokalni";
+    src: url("../fontovi/Roboto-Variable.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --tamno-plava: #07111f;
+    --svetlo-plava: #14243a;
+    --zelena: #c8ff32;
+    --bela: #ffffff;
+    --svetlo-siva: #eef2f5;
+    --siva: #a9b4bf;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "RobotoLokalni", Arial, sans-serif;
+    color: var(--bela);
+    background-color: var(--tamno-plava);
+    line-height: 1.6;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    background-color: var(--svetlo-plava);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+nav {
+    width: min(1100px, 90%);
+    min-height: 75px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+nav > a {
+    color: var(--bela);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul a {
+    display: block;
+    padding: 8px 0;
+    font-weight: bold;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+nav ul a:hover {
+    color: var(--zelena);
+    transform: translateY(-2px);
+}
+
+nav ul a[aria-current="page"] {
+    color: var(--zelena);
+    border-bottom: 2px solid var(--zelena);
+}
+
+main {
+    width: min(1100px, 90%);
+    flex: 1;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+section {
+    padding: 50px;
+    background-color: var(--svetlo-plava);
+    border-radius: 16px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+section.prikazan-element {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1 {
+    max-width: 750px;
+    margin-bottom: 25px;
+    color: var(--zelena);
+    font-size: clamp(36px, 7vw, 72px);
+    line-height: 1.05;
+}
+
+h2 {
+    margin-bottom: 12px;
+    color: var(--zelena);
+    font-size: 28px;
+}
+
+p {
+    max-width: 750px;
+    margin-bottom: 15px;
+    color: var(--svetlo-siva);
+    font-size: 18px;
+}
+
+article {
+    margin-top: 25px;
+    padding: 25px;
+    background-color: var(--tamno-plava);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    border-color: var(--zelena);
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #030914;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    max-width: none;
+    margin: 0;
+    color: var(--siva);
+    font-size: 15px;
+}
+
+@media (max-width: 700px) {
+    nav {
+        padding: 20px 0;
+        flex-direction: column;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    main {
+        padding: 40px 0;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+.multimedijalna-sekcija {
+    margin-top: 50px;
+}
+
+.multimedijalni-element {
+    margin-top: 35px;
+}
+
+.multimedijalna-slika,
+.multimedijalni-video {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+.dugme-dokument {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 22px;
+    color: var(--tamno-plava);
+    background-color: var(--zelena);
+    border-radius: 6px;
+    font-weight: bold;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.dugme-dokument:hover {
+    background-color: var(--bela);
+    transform: translateY(-2px);
+}
+
+.okvir-video-zapisa,
+.okvir-mape {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.okvir-video-zapisa iframe,
+.okvir-mape iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+form {
+    max-width: 750px;
+    margin-top: 35px;
+}
+
+.grupa-polja {
+    margin-bottom: 24px;
+}
+
+.grupa-polja label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--bela);
+    font-weight: bold;
+}
+
+.grupa-polja input,
+.grupa-polja select,
+.grupa-polja textarea {
+    width: 100%;
+    padding: 13px 15px;
+    color: var(--tamno-plava);
+    background-color: var(--bela);
+    border: 2px solid transparent;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.grupa-polja input:focus,
+.grupa-polja select:focus,
+.grupa-polja textarea:focus {
+    border-color: var(--zelena);
+    box-shadow: 0 0 0 3px rgba(200, 255, 50, 0.2);
+}
+
+.grupa-polja textarea {
+    resize: vertical;
+}
+
+.potvrda-saglasnosti {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    column-gap: 10px;
+}
+
+.potvrda-saglasnosti input {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+}
+
+.potvrda-saglasnosti label {
+    margin: 0;
+}
+
+.potvrda-saglasnosti .poruka-greske {
+    grid-column: 1 / -1;
+}
+
+.poruka-greske {
+    display: block;
+    min-height: 22px;
+    margin-top: 6px;
+    color: #ff8d8d;
+    font-size: 14px;
+}
+
+.grupa-polja .neispravno-polje {
+    border-color: #ff5252;
+}
+
+.poruka-uspeha {
+    max-width: 750px;
+    margin-top: 20px;
+    color: var(--tamno-plava);
+    background-color: var(--zelena);
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.poruka-uspeha:not(:empty) {
+    padding: 15px;
+}
+
+.dugme-za-slanje {
+    padding: 14px 25px;
+    color: var(--tamno-plava);
+    background-color: var(--zelena);
+    border: 0;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.dugme-za-slanje:hover {
+    background-color: var(--bela);
+    transform: translateY(-2px);
+}
+
+.multimedijalna-slika {
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.multimedijalna-slika:hover {
+    transform: scale(1.03) rotate(1deg);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+article {
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+article:hover {
+    transform: translateY(-8px);
+    border-color: var(--zelena);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.dugme-za-slanje {
+    animation: pulsiranje-dugmeta 2s infinite;
+}
+
+@keyframes pulsiranje-dugmeta {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(200, 255, 50, 0.4);
+    }
+
+    50% {
+        transform: scale(1.04);
+        box-shadow: 0 0 0 12px rgba(200, 255, 50, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(200, 255, 50, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.veza-logotipa {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logotip {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.veza-logotipa:hover .logotip {
+    transform: rotate(12deg) scale(1.08);
+}
+
+
+.glavna-navigacija {
+    position: relative;
+}
+
+.lista-glavnog-menija {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.lista-glavnog-menija > li {
+    position: relative;
+}
+
+.dugme-mega-menija {
+    padding: 8px 0;
+    color: var(--bela);
+    background-color: transparent;
+    border: 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.dugme-mega-menija:hover,
+.dugme-mega-menija:focus {
+    color: var(--zelena);
+}
+
+.dugme-mega-menija span {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 11px;
+    transition: transform 0.3s ease;
+}
+
+.mega-meni {
+    position: absolute;
+    top: calc(100% + 18px);
+    right: 0;
+    z-index: 1000;
+    width: 720px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15px);
+    background-color: var(--svetlo-plava);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.stavka-mega-menija:hover .mega-meni,
+.stavka-mega-menija:focus-within .mega-meni,
+.stavka-mega-menija.otvoren-meni .mega-meni {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stavka-mega-menija:hover
+.dugme-mega-menija span,
+.stavka-mega-menija:focus-within
+.dugme-mega-menija span,
+.stavka-mega-menija.otvoren-meni
+.dugme-mega-menija span {
+    transform: rotate(180deg);
+}
+
+.kolona-mega-menija {
+    min-width: 0;
+}
+
+.kolona-mega-menija h2 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    color: var(--zelena);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 19px;
+}
+
+.kolona-mega-menija a {
+    display: block;
+    padding: 8px 0;
+    color: var(--svetlo-siva);
+    font-weight: normal;
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+.kolona-mega-menija a:hover,
+.kolona-mega-menija a:focus {
+    padding-left: 6px;
+    color: var(--zelena);
+}
+
+@media (max-width: 800px) {
+    .glavna-navigacija {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .lista-glavnog-menija {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .mega-meni {
+        position: fixed;
+        top: 150px;
+        right: 5%;
+        left: 5%;
+        width: 90%;
+        grid-template-columns: 1fr;
+        max-height: 65vh;
+        overflow-y: auto;
+    }
+}
+
+.sekcija-slajdera {
+    margin-top: 50px;
+}
+
+.slajder {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+    margin-top: 30px;
+    overflow: hidden;
+    background-color: var(--tamno-plava);
+    border-radius: 14px;
+}
+
+.slajd {
+    position: absolute;
+    inset: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(40px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        visibility 0.6s ease;
+}
+
+.slajd.aktivan-slajd {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slajd img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.opis-slajda {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 50px 35px 30px;
+    color: var(--bela);
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.9)
+        );
+}
+
+.opis-slajda h3 {
+    margin-bottom: 8px;
+    color: var(--zelena);
+    font-size: 30px;
+}
+
+.opis-slajda p {
+    margin: 0;
+    color: var(--bela);
+}
+
+.dugme-slajdera {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    color: var(--tamno-plava);
+    background-color: var(--zelena);
+    border: 0;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.dugme-slajdera:hover {
+    background-color: var(--bela);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prethodni-slajd {
+    left: 20px;
+}
+
+.sledeci-slajd {
+    right: 20px;
+}
+
+.pokazivaci-slajdera {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pokazivac {
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    background-color: var(--siva);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition:
+        width 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.pokazivac.aktivan-pokazivac {
+    width: 35px;
+    background-color: var(--zelena);
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+    .slajder {
+        height: 400px;
+    }
+
+    .opis-slajda {
+        padding: 60px 20px 20px;
+    }
+
+    .opis-slajda h3 {
+        font-size: 23px;
+    }
+
+    .dugme-slajdera {
+        width: 42px;
+        height: 42px;
+    }
+
+    .prethodni-slajd {
+        left: 10px;
+    }
+
+    .sledeci-slajd {
+        right: 10px;
+    }
+}
+
+/* ==================================================
+   RESPONZIVNOST
+   ================================================== */
+
+/*
+    Fleksibilna tipografija za sve rezolucije
+*/
+
+h1 {
+    font-size: clamp(38px, 6vw, 72px);
+}
+
+h2 {
+    font-size: clamp(26px, 4vw, 38px);
+}
+
+h3 {
+    font-size: clamp(20px, 3vw, 28px);
+}
+
+p,
+a,
+button,
+input,
+select,
+textarea {
+    font-size: clamp(16px, 1.5vw, 18px);
+}
+
+
+/*
+    Prva rezolucija:
+    tableti i manji laptop računari
+*/
+
+@media screen and (max-width: 1000px) {
+    .glavna-navigacija {
+        width: 92%;
+        padding: 18px 0;
+        flex-wrap: wrap;
+    }
+
+    .lista-glavnog-menija {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    main {
+        width: 92%;
+        padding: 55px 0;
+    }
+
+    section {
+        padding: 40px 30px;
+    }
+
+    .mega-meni {
+        position: fixed;
+        top: 145px;
+        right: 4%;
+        left: 4%;
+        width: 92%;
+        grid-template-columns: repeat(2, 1fr);
+        max-height: 65vh;
+        overflow-y: auto;
+    }
+
+    .kolona-mega-menija:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .slajder {
+        height: 480px;
+    }
+
+    .multimedijalna-slika,
+    .multimedijalni-video {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .glavna-navigacija {
+        width: 94%;
+        padding: 15px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .veza-logotipa {
+        justify-content: center;
+    }
+
+    .logotip {
+        width: 45px;
+        height: 45px;
+    }
+
+    .lista-glavnog-menija {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 15px;
+    }
+
+    .lista-glavnog-menija > li > a,
+    .dugme-mega-menija {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    main {
+        width: 94%;
+        padding: 35px 0;
+    }
+
+    section {
+        padding: 30px 18px;
+        border-radius: 10px;
+    }
+
+    article {
+        padding: 20px 16px;
+    }
+
+    .mega-meni {
+        position: fixed;
+        top: 165px;
+        right: 3%;
+        left: 3%;
+        width: 94%;
+        padding: 20px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-height: 65vh;
+        overflow-y: auto;
+    }
+
+    .kolona-mega-menija:last-child {
+        grid-column: auto;
+    }
+
+    .slajder {
+        height: 370px;
+    }
+
+    .opis-slajda {
+        padding: 70px 18px 20px;
+    }
+
+    .opis-slajda h3 {
+        font-size: 22px;
+    }
+
+    .opis-slajda p {
+        font-size: 15px;
+    }
+
+    .dugme-slajdera {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .prethodni-slajd {
+        left: 8px;
+    }
+
+    .sledeci-slajd {
+        right: 8px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .dugme-za-slanje {
+        width: 100%;
+    }
+
+    .okvir-video-zapisa,
+    .okvir-mape {
+        padding-top: 70%;
+    }
+}
+
+h1 {
+    text-shadow:
+        0 0 8px rgba(200, 255, 50, 0.25),
+        0 0 18px rgba(200, 255, 50, 0.15);
+    transition:
+        color 0.4s ease,
+        text-shadow 0.4s ease;
+}
+
+h1:hover {
+    color: var(--bela);
+    text-shadow:
+        0 0 8px rgba(200, 255, 50, 0.8),
+        0 0 20px rgba(200, 255, 50, 0.6),
+        0 0 35px rgba(200, 255, 50, 0.4);
+}
+
+
+section > h2 {
+    transition:
+        color 0.4s ease,
+        text-shadow 0.4s ease;
+}
+
+section > h2:hover {
+    color: var(--zelena);
+    text-shadow:
+        0 0 10px rgba(200, 255, 50, 0.6),
+        0 0 22px rgba(200, 255, 50, 0.35);
+}
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+section.prikazan-element {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.multimedijalna-slika {
+    filter:
+        brightness(0.85)
+        saturate(0.8);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.4);
+    transition:
+        filter 0.5s ease,
+        transform 0.5s ease,
+        box-shadow 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.multimedijalna-slika:hover {
+    filter:
+        brightness(1.05)
+        saturate(1.2);
+    transform:
+        scale(1.03)
+        rotate(1deg);
+    box-shadow:
+        0 0 15px rgba(200, 255, 50, 0.35),
+        0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.slajd img {
+    opacity: 0.75;
+    filter:
+        brightness(0.8)
+        saturate(0.85);
+    transition:
+        opacity 0.6s ease,
+        filter 0.6s ease,
+        transform 5s ease;
+}
+
+.slajd.aktivan-slajd img {
+    opacity: 1;
+    filter:
+        brightness(1)
+        saturate(1.1);
+    transform: scale(1.04);
+}
+
+.veza-logotipa span {
+    transition:
+        color 0.4s ease,
+        text-shadow 0.4s ease;
+}
+
+.veza-logotipa:hover span {
+    color: var(--zelena);
+    text-shadow:
+        0 0 8px rgba(200, 255, 50, 0.7),
+        0 0 18px rgba(200, 255, 50, 0.4);
+}
+
+.kontrole-pristupacnosti {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.kontrole-pristupacnosti span,
+.kontrole-pristupacnosti label {
+    font-weight: bold;
+}
+
+.kontrole-pristupacnosti button,
+.kontrole-pristupacnosti select {
+    padding: 7px 10px;
+    color: var(--tamno-plava);
+    background-color: var(--bela);
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.kontrole-pristupacnosti button:hover,
+.kontrole-pristupacnosti button:focus,
+.kontrole-pristupacnosti select:focus {
+    border-color: var(--zelena);
+    outline: none;
+}
+
+
+:root[data-tema="svetla"] {
+    --tamno-plava: #f2f5f8;
+    --svetlo-plava: #ffffff;
+    --bela: #102033;
+    --svetlo-siva: #26384a;
+    --siva: #536579;
+}
+
+:root[data-tema="svetla"] body {
+    color: #102033;
+    background-color: #e8eef3;
+}
+
+:root[data-tema="svetla"] header,
+:root[data-tema="svetla"] section,
+:root[data-tema="svetla"] .mega-meni {
+    color: #102033;
+    background-color: #ffffff;
+}
+
+:root[data-tema="svetla"] article {
+    color: #102033;
+    background-color: #edf2f6;
+}
+
+:root[data-tema="svetla"] footer {
+    color: #102033;
+    background-color: #dce5ec;
+}
+
+:root[data-velicina-fonta="manji"] {
+    font-size: 14px;
+}
+
+:root[data-velicina-fonta="normalan"] {
+    font-size: 16px;
+}
+
+:root[data-velicina-fonta="veci"] {
+    font-size: 20px;
+}
+
+:root[data-velicina-fonta="manji"]
+:is(p, a, button, input, select, textarea) {
+    font-size: 0.9rem !important;
+}
+
+:root[data-velicina-fonta="normalan"]
+:is(p, a, button, input, select, textarea) {
+    font-size: 1rem !important;
+}
+
+:root[data-velicina-fonta="veci"]
+:is(p, a, button, input, select, textarea) {
+    font-size: 1.2rem !important;
+}
+
+:root[data-velicina-fonta="veci"] h1 {
+    font-size: 4rem;
+}
+
+:root[data-velicina-fonta="veci"] h2 {
+    font-size: 2.3rem;
+}
+
+@media screen and (max-width: 600px) {
+    .kontrole-pristupacnosti {
+        justify-content: center;
+    }
+
+    :root[data-velicina-fonta="veci"] h1 {
+        font-size: 2.7rem;
+    }
+}

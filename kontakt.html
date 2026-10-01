@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="sr-Latn">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Kontaktirajte sportski centar, izaberite željenu uslugu i prijavite se za besplatan probni trening."
+    >
+
+    <meta
+        name="keywords"
+        content="kontakt sportski centar, probni trening, prijava za trening, teretana, personalni trening, sportski programi"
+    >
+
+    <meta
+        name="author"
+        content="Sportski centar"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="language"
+        content="Serbian"
+    >
+
+    <title>Kontakt | Sportski centar</title>
+
+    <link rel="stylesheet" href="css/stilovi.css">
+</head>
+
+<body>
+    <header>
+        <nav
+            class="glavna-navigacija"
+            aria-label="Glavna navigacija"
+        >
+            <a
+                class="veza-logotipa"
+                href="pocetna.html"
+                aria-label="Sportski centar – početna stranica"
+            >
+                <img
+                    class="logotip"
+                    src="slike/logo-sportskog-centra.svg"
+                    alt="Logo sportskog centra"
+                >
+
+                <span data-prevod="nazivCentra">
+                    Sportski centar
+                </span>
+            </a>
+
+            <ul class="lista-glavnog-menija">
+                <li>
+                    <a
+                        href="pocetna.html"
+                        data-prevod="pocetna"
+                    >
+                        Početna
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="o-nama.html"
+                        data-prevod="oNama"
+                    >
+                        O nama
+                    </a>
+                </li>
+
+                <li class="stavka-mega-menija">
+                    <button
+                        class="dugme-mega-menija"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="padajuci-mega-meni"
+                    >
+                        <span data-prevod="usluge">
+                            Usluge
+                        </span>
+
+                        <span aria-hidden="true">▼</span>
+                    </button>
+
+                    <div
+                        class="mega-meni"
+                        id="padajuci-mega-meni"
+                    >
+                        <div class="kolona-mega-menija">
+                            <h2 data-prevod="fitnes">
+                                Fitnes
+                            </h2>
+
+                            <a
+                                href="usluge.html#teretana"
+                                data-prevod="teretana"
+                            >
+                                Teretana
+                            </a>
+
+                            <a
+                                href="usluge.html#grupni-treninzi"
+                                data-prevod="grupniTreninzi"
+                            >
+                                Grupni treninzi
+                            </a>
+
+                            <a
+                                href="usluge.html#personalni-treninzi"
+                                data-prevod="personalniTreninzi"
+                            >
+                                Personalni treninzi
+                            </a>
+                        </div>
+
+                        <div class="kolona-mega-menija">
+                            <h2 data-prevod="sport">
+                                Sport
+                            </h2>
+
+                            <a
+                                href="usluge.html#sportski-tereni"
+                                data-prevod="sportskiTereni"
+                            >
+                                Sportski tereni
+                            </a>
+
+                            <a
+                                href="usluge.html#skola-sporta"
+                                data-prevod="skolaSporta"
+                            >
+                                Škola sporta
+                            </a>
+
+                            <a
+                                href="usluge.html#takmicenja"
+                                data-prevod="takmicenja"
+                            >
+                                Sportska takmičenja
+                            </a>
+                        </div>
+
+                        <div class="kolona-mega-menija">
+                            <h2 data-prevod="informacije">
+                                Informacije
+                            </h2>
+
+                            <a
+                                href="usluge.html#multimedija"
+                                data-prevod="multimedija"
+                            >
+                                Multimedija
+                            </a>
+
+                            <a
+                                href="dokumenti/cenovnik.pdf"
+                                target="_blank"
+                                rel="noopener"
+                                data-prevod="cenovnik"
+                            >
+                                Cenovnik
+                            </a>
+
+                            <a
+                                href="kontakt.html"
+                                data-prevod="probniTrening"
+                            >
+                                Probni trening
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <a
+                        href="kontakt.html"
+                        aria-current="page"
+                        data-prevod="kontakt"
+                    >
+                        Kontakt
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div
+            class="kontrole-pristupacnosti"
+            aria-label="Podešavanja pristupačnosti"
+        >
+            <span data-prevod="pristupacnost">
+                Pristupačnost
+            </span>
+
+            <button
+                id="tamna-tema"
+                type="button"
+                data-prevod="tamnaTema"
+            >
+                Tamna tema
+            </button>
+
+            <button
+                id="svetla-tema"
+                type="button"
+                data-prevod="svetlaTema"
+            >
+                Svetla tema
+            </button>
+
+            <button
+                id="manji-font"
+                type="button"
+                data-prevod="manjiFont"
+            >
+                Manji font
+            </button>
+
+            <button
+                id="normalan-font"
+                type="button"
+                data-prevod="normalanFont"
+            >
+                Normalan font
+            </button>
+
+            <button
+                id="veci-font"
+                type="button"
+                data-prevod="veciFont"
+            >
+                Veći font
+            </button>
+
+            <label
+                for="izbor-jezika"
+                data-prevod="jezik"
+            >
+                Jezik:
+            </label>
+
+            <select id="izbor-jezika">
+                <option value="sr">
+                    Srpski
+                </option>
+
+                <option value="en">
+                    English
+                </option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1 data-prevod="kontaktNaslov">
+                Kontaktirajte nas
+            </h1>
+
+            <p data-prevod="kontaktOpis">
+                Popunite formu i prijavite se za besplatan
+                probni trening.
+            </p>
+
+            <div
+                id="poruka-uspesnog-slanja"
+                class="poruka-uspeha"
+                role="status"
+                aria-live="polite"
+            ></div>
+
+            <form
+                id="kontakt-forma"
+                action="#"
+                method="post"
+                novalidate
+            >
+                <div class="grupa-polja">
+                    <label
+                        for="ime-i-prezime"
+                        data-prevod="imeIPrezime"
+                    >
+                        Ime i prezime
+                    </label>
+
+                    <input
+                        type="text"
+                        id="ime-i-prezime"
+                        name="ime-i-prezime"
+                        minlength="3"
+                        maxlength="50"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <small
+                        id="greska-ime"
+                        class="poruka-greske"
+                        aria-live="polite"
+                    ></small>
+                </div>
+
+                <div class="grupa-polja">
+                    <label
+                        for="adresa-e-poste"
+                        data-prevod="adresaEPoste"
+                    >
+                        Adresa e-pošte
+                    </label>
+
+                    <input
+                        type="email"
+                        id="adresa-e-poste"
+                        name="adresa-e-poste"
+                        maxlength="100"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <small
+                        id="greska-e-posta"
+                        class="poruka-greske"
+                        aria-live="polite"
+                    ></small>
+                </div>
+
+                <div class="grupa-polja">
+                    <label
+                        for="broj-telefona"
+                        data-prevod="brojTelefona"
+                    >
+                        Broj telefona
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="broj-telefona"
+                        name="broj-telefona"
+                        pattern="[0-9 +()-]{7,20}"
+                        maxlength="20"
+                        autocomplete="tel"
+                        placeholder="Na primer: 064 123 4567"
+                        data-prevod-placeholder="primerTelefona"
+                        required
+                    >
+
+                    <small
+                        id="greska-telefon"
+                        class="poruka-greske"
+                        aria-live="polite"
+                    ></small>
+                </div>
+
+                <div class="grupa-polja">
+                    <label
+                        for="izabrana-usluga"
+                        data-prevod="izaberiteUslugu"
+                    >
+                        Izaberite uslugu
+                    </label>
+
+                    <select
+                        id="izabrana-usluga"
+                        name="izabrana-usluga"
+                        required
+                    >
+                        <option
+                            value=""
+                            data-prevod="izaberiteUslugu"
+                        >
+                            Izaberite uslugu
+                        </option>
+
+                        <option
+                            value="teretana"
+                            data-prevod="teretana"
+                        >
+                            Teretana
+                        </option>
+
+                        <option
+                            value="grupni-trening"
+                            data-prevod="grupniTrening"
+                        >
+                            Grupni trening
+                        </option>
+
+                        <option
+                            value="personalni-trening"
+                            data-prevod="personalniTrening"
+                        >
+                            Personalni trening
+                        </option>
+
+                        <option
+                            value="sportski-teren"
+                            data-prevod="sportskiTeren"
+                        >
+                            Sportski teren
+                        </option>
+                    </select>
+
+                    <small
+                        id="greska-usluga"
+                        class="poruka-greske"
+                        aria-live="polite"
+                    ></small>
+                </div>
+
+                <div class="grupa-polja">
+                    <label
+                        for="poruka-korisnika"
+                        data-prevod="poruka"
+                    >
+                        Poruka
+                    </label>
+
+                    <textarea
+                        id="poruka-korisnika"
+                        name="poruka-korisnika"
+                        rows="6"
+                        minlength="10"
+                        maxlength="500"
+                        placeholder="Napišite najmanje 10 karaktera."
+                        data-prevod-placeholder="porukaPlaceholder"
+                        required
+                    ></textarea>
+
+                    <small
+                        id="greska-poruka"
+                        class="poruka-greske"
+                        aria-live="polite"
+                    ></small>
+                </div>
+
+                <div class="grupa-polja potvrda-saglasnosti">
+                    <input
+                        type="checkbox"
+                        id="saglasnost"
+                        name="saglasnost"
+                        required
+                    >
+
+                    <label
+                        for="saglasnost"
+                        data-prevod="saglasnost"
+                    >
+                        Saglasan sam sa obradom unetih podataka.
+                    </label>
+
+                    <small
+                        id="greska-saglasnost"
+                        class="poruka-greske"
+                        aria-live="polite"
+                    ></small>
+                </div>
+
+                <button
+                    class="dugme-za-slanje"
+                    type="submit"
+                    data-prevod="posaljitePrijavu"
+                >
+                    Pošaljite prijavu
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p data-prevod="nazivCentra">
+            Sportski centar
+        </p>
+    </footer>
+
+    <script src="js/glavna-skripta.js"></script>
+    <script src="js/pristupacnost.js"></script>
+</body>
+</html>

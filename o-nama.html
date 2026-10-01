@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="sr-Latn" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Saznajte više o sportskom centru, našoj misiji, vrednostima, stručnim trenerima i sportskim programima."
+    >
+
+    <meta
+        name="keywords"
+        content="o sportskom centru, sportski treneri, sportski programi, rekreacija, fizička aktivnost, zdrav život"
+    >
+
+    <meta
+        name="author"
+        content="Sportski centar"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="language"
+        content="Serbian"
+    >
+
+    <title>O nama | Sportski centar</title>
+
+    <link
+        rel="stylesheet"
+        href="biblioteke/bootstrap/css/bootstrap.min.css"
+    >
+</head>
+
+<body class="bg-body text-body">
+    <header>
+        <nav
+            class="navbar navbar-expand-lg bg-body-tertiary
+                   border-bottom border-secondary"
+            aria-label="Glavna navigacija"
+        >
+            <div class="container">
+                <a
+                    class="navbar-brand d-flex align-items-center
+                           gap-2 fs-3 fw-bold text-warning"
+                    href="pocetna.html"
+                >
+                    <img
+                        class="img-fluid"
+                        src="slike/logo-sportskog-centra.svg"
+                        alt="Logo sportskog centra"
+                        width="55"
+                        height="55"
+                    >
+
+                    <span data-prevod="nazivCentra">
+                        Sportski centar
+                    </span>
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#glavna-navigacija"
+                    aria-controls="glavna-navigacija"
+                    aria-expanded="false"
+                    aria-label="Otvori navigaciju"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="glavna-navigacija"
+                >
+                    <ul
+                        class="navbar-nav ms-auto
+                               align-items-lg-center gap-lg-2"
+                    >
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="pocetna.html"
+                                data-prevod="pocetna"
+                            >
+                                Početna
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link active"
+                                href="o-nama.html"
+                                aria-current="page"
+                                data-prevod="oNama"
+                            >
+                                O nama
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="padajuci-meni-usluge"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                data-prevod="usluge"
+                            >
+                                Usluge
+                            </a>
+
+                            <ul
+                                class="dropdown-menu"
+                                aria-labelledby="padajuci-meni-usluge"
+                            >
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="usluge.html#teretana"
+                                        data-prevod="teretana"
+                                    >
+                                        Teretana
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="usluge.html#grupni-treninzi"
+                                        data-prevod="grupniTreninzi"
+                                    >
+                                        Grupni treninzi
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="usluge.html#personalni-treninzi"
+                                        data-prevod="personalniTreninzi"
+                                    >
+                                        Personalni treninzi
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="usluge.html#sportski-tereni"
+                                        data-prevod="sportskiTereni"
+                                    >
+                                        Sportski tereni
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="usluge.html#multimedija"
+                                        data-prevod="multimedija"
+                                    >
+                                        Multimedija
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="dokumenti/cenovnik.pdf"
+                                        target="_blank"
+                                        rel="noopener"
+                                        data-prevod="cenovnik"
+                                    >
+                                        Cenovnik
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="kontakt.html"
+                                data-prevod="kontakt"
+                            >
+                                Kontakt
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div
+            class="container-fluid py-3 border-bottom
+                   border-secondary bg-body-tertiary"
+            aria-label="Podešavanja pristupačnosti"
+        >
+            <div
+                class="container d-flex flex-wrap
+                       justify-content-center align-items-center gap-2"
+            >
+                <span
+                    class="fw-bold me-2"
+                    data-prevod="pristupacnost"
+                >
+                    Pristupačnost
+                </span>
+
+                <button
+                    class="btn btn-outline-secondary"
+                    id="tamna-tema"
+                    type="button"
+                    data-prevod="tamnaTema"
+                >
+                    Tamna tema
+                </button>
+
+                <button
+                    class="btn btn-outline-secondary"
+                    id="svetla-tema"
+                    type="button"
+                    data-prevod="svetlaTema"
+                >
+                    Svetla tema
+                </button>
+
+                <button
+                    class="btn btn-outline-secondary"
+                    id="manji-font"
+                    type="button"
+                    data-prevod="manjiFont"
+                >
+                    Manji font
+                </button>
+
+                <button
+                    class="btn btn-outline-secondary"
+                    id="normalan-font"
+                    type="button"
+                    data-prevod="normalanFont"
+                >
+                    Normalan font
+                </button>
+
+                <button
+                    class="btn btn-outline-secondary"
+                    id="veci-font"
+                    type="button"
+                    data-prevod="veciFont"
+                >
+                    Veći font
+                </button>
+
+                <label
+                    class="fw-bold ms-2"
+                    for="izbor-jezika"
+                    data-prevod="jezik"
+                >
+                    Jezik:
+                </label>
+
+                <select
+                    class="form-select w-auto"
+                    id="izbor-jezika"
+                >
+                    <option value="sr">
+                        Srpski
+                    </option>
+
+                    <option value="en">
+                        English
+                    </option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-5 bg-body-tertiary">
+            <div class="container py-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <p
+                            class="text-warning fw-bold
+                                   text-uppercase mb-3"
+                            data-prevod="oNasemCentru"
+                        >
+                            O našem centru
+                        </p>
+
+                        <h1
+                            class="display-2 fw-bold mb-4"
+                            data-prevod="naslovONama"
+                        >
+                            Sport nas pokreće i povezuje
+                        </h1>
+
+                        <p
+                            class="lead text-body-secondary mb-4"
+                            data-prevod="opisONama"
+                        >
+                            Naš sportski centar pruža savremene uslove
+                            za trening, rekreaciju i kvalitetno
+                            provođenje slobodnog vremena.
+                        </p>
+
+                        <a
+                            class="btn btn-warning btn-lg fw-bold"
+                            href="usluge.html"
+                            data-prevod="pogledajteUsluge"
+                        >
+                            Pogledajte usluge
+                        </a>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div
+                            class="p-5 bg-body border border-secondary
+                                   rounded-4 shadow"
+                        >
+                            <h2
+                                class="h3 text-warning mb-4"
+                                data-prevod="nasaMisija"
+                            >
+                                Naša misija
+                            </h2>
+
+                            <p
+                                class="mb-0 text-body-secondary"
+                                data-prevod="opisMisije"
+                            >
+                                Želimo da ljudima svih uzrasta pružimo
+                                bezbedan i prijatan prostor za fizičku
+                                aktivnost i zdrav način života.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <p
+                        class="text-warning fw-bold
+                               text-uppercase mb-2"
+                        data-prevod="naseVrednosti"
+                    >
+                        Naše vrednosti
+                    </p>
+
+                    <h2
+                        class="display-5 fw-bold"
+                        data-prevod="zastoIzabratiCentar"
+                    >
+                        Zašto izabrati naš centar?
+                    </h2>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article
+                            class="h-100 p-4 bg-body-tertiary border
+                                   border-secondary rounded-4 shadow"
+                        >
+                            <p class="display-4 fw-bold text-warning">
+                                01
+                            </p>
+
+                            <h3
+                                class="h4"
+                                data-prevod="strucnost"
+                            >
+                                Stručnost
+                            </h3>
+
+                            <p
+                                class="text-body-secondary mb-0"
+                                data-prevod="opisStrucnosti"
+                            >
+                                Naš tim čine stručni treneri sa
+                                iskustvom u različitim sportovima.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article
+                            class="h-100 p-4 bg-body-tertiary border
+                                   border-secondary rounded-4 shadow"
+                        >
+                            <p class="display-4 fw-bold text-warning">
+                                02
+                            </p>
+
+                            <h3
+                                class="h4"
+                                data-prevod="bezbednost"
+                            >
+                                Bezbednost
+                            </h3>
+
+                            <p
+                                class="text-body-secondary mb-0"
+                                data-prevod="opisBezbednosti"
+                            >
+                                Vodimo računa o pravilnom izvođenju
+                                vežbi, higijeni i bezbednosti članova.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article
+                            class="h-100 p-4 bg-body-tertiary border
+                                   border-secondary rounded-4 shadow"
+                        >
+                            <p class="display-4 fw-bold text-warning">
+                                03
+                            </p>
+
+                            <h3
+                                class="h4"
+                                data-prevod="zajednistvo"
+                            >
+                                Zajedništvo
+                            </h3>
+
+                            <p
+                                class="text-body-secondary mb-0"
+                                data-prevod="opisZajednistva"
+                            >
+                                Gradimo pozitivno okruženje u kome
+                                članovi podržavaju jedni druge.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-body-tertiary">
+            <div class="container py-4">
+                <div class="row text-center g-4">
+                    <div class="col-6 col-lg-3">
+                        <p
+                            class="display-4 fw-bold
+                                   text-warning mb-1"
+                        >
+                            10
+                        </p>
+
+                        <p
+                            class="mb-0 text-body-secondary"
+                            data-prevod="godinaIskustva"
+                        >
+                            godina iskustva
+                        </p>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <p
+                            class="display-4 fw-bold
+                                   text-warning mb-1"
+                        >
+                            25
+                        </p>
+
+                        <p
+                            class="mb-0 text-body-secondary"
+                            data-prevod="strucnihTrenera"
+                        >
+                            stručnih trenera
+                        </p>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <p
+                            class="display-4 fw-bold
+                                   text-warning mb-1"
+                        >
+                            800+
+                        </p>
+
+                        <p
+                            class="mb-0 text-body-secondary"
+                            data-prevod="aktivnihClanova"
+                        >
+                            aktivnih članova
+                        </p>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <p
+                            class="display-4 fw-bold
+                                   text-warning mb-1"
+                        >
+                            15
+                        </p>
+
+                        <p
+                            class="mb-0 text-body-secondary"
+                            data-prevod="sportskihPrograma"
+                        >
+                            sportskih programa
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container py-4">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-5">
+                            <p
+                                class="text-warning fw-bold
+                                       text-uppercase mb-2"
+                                data-prevod="informacije"
+                            >
+                                Informacije
+                            </p>
+
+                            <h2
+                                class="display-5 fw-bold"
+                                data-prevod="cestaPitanja"
+                            >
+                                Česta pitanja
+                            </h2>
+                        </div>
+
+                        <div
+                            class="accordion"
+                            id="cesta-pitanja"
+                        >
+                            <div class="accordion-item">
+                                <h3
+                                    class="accordion-header"
+                                    id="naslov-pitanja-jedan"
+                                >
+                                    <button
+                                        class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#odgovor-jedan"
+                                        aria-expanded="true"
+                                        aria-controls="odgovor-jedan"
+                                        data-prevod="pitanjePriprema"
+                                    >
+                                        Da li je potreban prethodni nivo
+                                        fizičke pripreme?
+                                    </button>
+                                </h3>
+
+                                <div
+                                    id="odgovor-jedan"
+                                    class="accordion-collapse
+                                           collapse show"
+                                    aria-labelledby="naslov-pitanja-jedan"
+                                    data-bs-parent="#cesta-pitanja"
+                                >
+                                    <div
+                                        class="accordion-body"
+                                        data-prevod="odgovorPriprema"
+                                    >
+                                        Nije. Programi su prilagođeni
+                                        početnicima, rekreativcima i
+                                        iskusnim sportistima.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3
+                                    class="accordion-header"
+                                    id="naslov-pitanja-dva"
+                                >
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#odgovor-dva"
+                                        aria-expanded="false"
+                                        aria-controls="odgovor-dva"
+                                        data-prevod="pitanjeProbniTrening"
+                                    >
+                                        Da li postoji probni trening?
+                                    </button>
+                                </h3>
+
+                                <div
+                                    id="odgovor-dva"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="naslov-pitanja-dva"
+                                    data-bs-parent="#cesta-pitanja"
+                                >
+                                    <div
+                                        class="accordion-body"
+                                        data-prevod="odgovorProbniTrening"
+                                    >
+                                        Da. Termin probnog treninga može
+                                        se zakazati preko kontakt
+                                        stranice.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3
+                                    class="accordion-header"
+                                    id="naslov-pitanja-tri"
+                                >
+                                    <button
+                                        class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#odgovor-tri"
+                                        aria-expanded="false"
+                                        aria-controls="odgovor-tri"
+                                        data-prevod="pitanjeVikend"
+                                    >
+                                        Da li centar radi vikendom?
+                                    </button>
+                                </h3>
+
+                                <div
+                                    id="odgovor-tri"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="naslov-pitanja-tri"
+                                    data-bs-parent="#cesta-pitanja"
+                                >
+                                    <div
+                                        class="accordion-body"
+                                        data-prevod="odgovorVikend"
+                                    >
+                                        Centar je otvoren svakog dana,
+                                        uključujući subotu i nedelju.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        class="py-4 bg-body-tertiary
+               border-top border-secondary"
+    >
+        <div
+            class="container d-flex flex-column flex-md-row
+                   justify-content-between text-center gap-2"
+        >
+            <p
+                class="mb-0"
+                data-prevod="nazivCentra"
+            >
+                Sportski centar
+            </p>
+
+            <p
+                class="mb-0 text-body-secondary"
+                data-prevod="oNama"
+            >
+                O nama
+            </p>
+        </div>
+    </footer>
+
+    <script
+        src="biblioteke/bootstrap/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <script src="js/pristupacnost.js"></script>
+</body>
+</html>
